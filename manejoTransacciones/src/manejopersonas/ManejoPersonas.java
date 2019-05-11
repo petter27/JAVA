@@ -4,9 +4,14 @@
  * and open the template in the editor.
  */
 package manejopersonas;
+import datos.conexion;
 import datos.personaJDBC;
 import domain.Persona;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author pedro
@@ -18,17 +23,27 @@ public class ManejoPersonas {
      */
     public static void main(String[] args) {
         personaJDBC personasJDBC=new personaJDBC();
-        //personasJDBC.insert("Armando", "Pacheco");
-        //personasJDBC.update(3, "Jose", "Martinez");
-        //personasJDBC.Delete(3);
-        
-        List<Persona> personas=personasJDBC.select();
-        
-        for(Persona persona:personas){
-            System.out.println("id: "+persona.getId_persona());
-            System.out.println("nombre: "+persona.getNombre());
-            System.out.println("Apellido: "+persona.getApellido());
+        Connection conn=null;
+        try {
+            conn=conexion.getConnection();
+            //Revisar si la conexion tiene activo el autoCommit para desactivarlo
+            if(conn.getAutoCommit()){
+                conn.setAutoCommit(false);
+            }       
+            personaJDBC personas=new personaJDBC(conn);
+            personas.update(2, "Juan", "Gonzales");
+            personas.insert("error", "corregjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjjido");
+            conn.commit();
+                    } catch (SQLException ex) {
+            try {
+                System.out.println("Algo salio mal... No se guardaron los cambios");
+                ex.printStackTrace(System.out);
+                conn.rollback();
+            } catch (SQLException ex1) {
+                ex1.printStackTrace(System.out);
+            }
         }
+       
         
     }
     
