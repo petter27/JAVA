@@ -97,7 +97,7 @@ public class personaJDBC {
         PreparedStatement stmt=null;
         ResultSet rs=null;
         Persona persona=null;
-        List<Persona> personas=new ArrayList<Persona>();
+        List<Persona> personas=new ArrayList<>();
         try {
             conn=(this.userConn!=null) ? this.userConn : conexion.getConnection();
             stmt =conn.prepareStatement(SQL_SELECT);
@@ -111,7 +111,7 @@ public class personaJDBC {
             }
         }finally{
         conexion.close(rs);
-        conexion.close(rs);
+        conexion.close(stmt);
         if(this.userConn==null){
         conexion.close(conn);
         }
