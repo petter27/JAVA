@@ -1,0 +1,63 @@
+
+body{
+    background-color: black;
+    background-image: url("../img/background.jpg");
+}
+
+h1{
+    color: #38c128;
+    border: 1px solid #c5d11f;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0px 10px 10px;
+    margin-left: 40px; 
+    margin-right: 40px;
+    width:auto;
+}
+
+#form1{
+    margin-top: 40px;
+    color: white;
+    text-decoration: blink;
+    text-align: center;
+    display: inline-block;
+    width: auto;
+    
+}
+
+.centrar{
+    text-align: center;
+}
+
+.form_control {
+ font-size: 30px;
+ margin-top: 15px;
+}
+
+input{
+    margin-top: 10px;
+    display: block;
+    font-size: 25px;
+}
+
+input:hover{
+    background-color: #3fccc7;
+    color: white;
+}
+button{
+    margin-top: 15px;
+    color: white;
+    background: green;
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2em;
+}
+button:hover{
+    
+    background-color: #3fccc7;
+}
+
+.like{
+    background-image: url("../img/back2.jpg");
+    background-size:cover;
+}

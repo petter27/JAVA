@@ -122,7 +122,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setFont(new java.awt.Font("Tahoma", 3, 25)); // NOI18N
-        jLabel1.setText("Paquetes FREE!!");
+        jLabel1.setText("GRAN RIFA !!");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(201, 23, 239, 43));
 
         jLabel2.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
@@ -159,7 +159,7 @@ public class Principal extends javax.swing.JFrame {
         getContentPane().add(lblFotoParticipante, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 360, 260, 260));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/participantes/fondo3.jpg"))); // NOI18N
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 770, 660));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 780, 660));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
